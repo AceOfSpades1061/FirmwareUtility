@@ -33,8 +33,13 @@ elif [ "$choice" == "3" ]; then
     echo "placeholder sorry"
 
 elif [ "$choice" == "4" ]; then
-    echo "you clown, you really thought this was going to work?"
+    echo "this little script is gonna cost you a lot of time to undo. just so you know."
     sleep 1s
+    echo "Are you sure running this script is worth it?"
+    sleep 1s
+    echo "You have 5 seconds to ctrl+c"
+    sleep 5s
+    echo "too late!"
     crossystem battery_cutoff_request=1
     echo "crossystem battery_cutoff_request TRUE"
     crossystem block_devmode=1

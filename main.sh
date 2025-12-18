@@ -1,15 +1,15 @@
 #!/bin/bash
 
-SCRIPT_DATE="[12/16/2025]"
-SCRIPT_VERSION="1.0.0"
+SCRIPT_DATE="[12/18/2025]"
+SCRIPT_VERSION="PRE-ALPHA v1.0.0"
 
 cat << EOF
-██████╗ ███████╗██╗   ██╗       ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗
-██╔══██╗██╔════╝██║   ██║       ██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝
-██║  ██║█████╗  ██║   ██║       ███████╗██║     ██████╔╝██║██████╔╝   ██║   
-██║  ██║██╔══╝  ╚██╗ ██╔╝       ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   
-██████╔╝███████╗ ╚████╔╝███████╗███████║╚██████╗██║  ██║██║██║        ██║   
-╚═════╝ ╚══════╝  ╚═══╝ ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   
+███████╗██╗██████╗ ███╗   ███╗██╗    ██╗ █████╗ ██████╗ ███████╗        ██╗   ██╗████████╗██╗██╗     ██╗████████╗██╗   ██╗
+██╔════╝██║██╔══██╗████╗ ████║██║    ██║██╔══██╗██╔══██╗██╔════╝        ██║   ██║╚══██╔══╝██║██║     ██║╚══██╔══╝╚██╗ ██╔╝
+█████╗  ██║██████╔╝██╔████╔██║██║ █╗ ██║███████║██████╔╝█████╗          ██║   ██║   ██║   ██║██║     ██║   ██║    ╚████╔╝ 
+██╔══╝  ██║██╔══██╗██║╚██╔╝██║██║███╗██║██╔══██║██╔══██╗██╔══╝          ██║   ██║   ██║   ██║██║     ██║   ██║     ╚██╔╝  
+██║     ██║██║  ██║██║ ╚═╝ ██║╚███╔███╔╝██║  ██║██║  ██║███████╗███████╗╚██████╔╝   ██║   ██║███████╗██║   ██║      ██║   
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝    ╚═╝   ╚═╝╚══════╝╚═╝   ╚═╝      ╚═╝   
 EOF
 echo "A Utility Script for Unenrolled ChromeOS Devices in Dev Mode - Script Version: $SCRIPT_VERSION - Script Date: $SCRIPT_DATE"
 echo "Hopefully your on the VT2 shell right now..."
@@ -17,7 +17,7 @@ echo ""
 echo "[1] Stop ChromeOS from Checking Enrollment Status"
 echo "[2] Write GBB Flags [WRITE PROTECT MUST BE DISABLED]"
 echo "[3] Wipe GBB Flags [WRITE PROTECT MUST BE DISABLED]"
-echo "[4] kv67 unerololment trust me it works"
+echo "[4] kv6-7 mango unenrollment method"
 echo ""
 echo -n "> "
 read choice
@@ -27,7 +27,6 @@ if [ "$choice" == "1" ]; then
     mount --bind /tmp/chrome_dev.conf /etc/chrome_dev.conf
     initctl restart ui
 elif [ "$choice" == "2" ]; then
-    echo "WRITE PROTECT MUST BE DISABLED FOR THIS TO ACTUALLY APPLY."
     echo "placeholder sorry"
 elif [ "$choice" == "3" ]; then
     echo "placeholder sorry"
